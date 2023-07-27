@@ -71,7 +71,16 @@ The stakeholder would like advice to provide homeowners information about how ho
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
 * Check for multlicollinearity within features and drop columns accordingly. 
-## Model Sumamry
+## Summary of Findings
 
+## Model Sumamry
+| Model   | Description                                | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
+|:--------|:-------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
+| Model 1 | All features                               |       111       |0.697| 69.70%   |0.10176505179945569| Fail      | Pass             |
+| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.09990739278487029| Fail      | Pass             |
+| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.09990739278487029| Fail      | Pass             |
+### Model Normality and Homoscedasticity
+
+#### 
 ## Conclusion
 
