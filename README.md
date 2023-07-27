@@ -62,12 +62,22 @@ The stakeholder would like advice to provide homeowners information about how ho
 * Identify and remove null records as well as duplicated records.
 * Normalize continous data to remove outliers and convert it back to original values. 
 * Linearize continous data using Log transformation. 
-* Extract zipcode and encode the zipcode so we only have unique records. Allows us to consider location as a feature. 
+* Extract zipcode and encode the zipcode so we only have unique records. Allows us to consider location as a feature.
+
+Normalized Data and removed Outliers:
+
+![Standard_vs_Cont_Data_Distributions](images/Normal%20Dist%20vs%20Standardized%20Data%20Dist.png)
+
 ### Part 2: Visualizations
 * Create interaction scatterplots using the categorical variables to see behavior in price vs a feature that is not categorical. 
 * View bar graphs for categorical variables with the heights corresponding to price.
 * View correlations with price for both continuous and categorical variables.
 * Create heatmap uisng long and lat and the interaction being price. 
+
+Categoricals vs Price_log:
+
+![cat_bar](images/cat_bar.png)
+
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
 * Check for multlicollinearity within features and drop columns accordingly. 
