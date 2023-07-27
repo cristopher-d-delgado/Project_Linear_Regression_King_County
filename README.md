@@ -76,11 +76,36 @@ The stakeholder would like advice to provide homeowners information about how ho
 ## Model Sumamry
 | Model   | Description                                | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
 |:--------|:-------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
-| Model 1 | All features                               |       111       |0.697| 69.70%   |0.10176505179945569| Fail      | Pass             |
-| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.09990739278487029| Fail      | Pass             |
-| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.09990739278487029| Fail      | Pass             |
+| Model 1 | All features                               |       111       |0.697| 69.70%   |0.10176505179945569| Fail      | Fail             |
+| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.09990739278487029| Fail      | Fail             |
+| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.09990739278487029| Fail      | Fail             |
 ### Model Normality and Homoscedasticity
+**Model 1:**
 
+Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model1](images/Model%201%20Normality%20Check.png)
+![Homoscedasticity_Model1](images/Model%201%20Homoscedasticity%20Check.png)
+
+**Model 2:** 
+
+Model 2 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model2](images/Model%202%20Normality%20Check.png)
+![Homoscedasticity_Model2](images/Model%202%20Homoscedasticity%20Check.png)
+
+**Model 3:** 
+
+Model 3 fails the normality check as the sample data differs significantly from the predicted data for high and low values. Removing features did shorten the tails for the normality check. Most of the features removed were zipcodes. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model3](images/Model%203%20Normality%20Check.png)
+![Homoscedasticity_Model3](images/Model%203%20Homoscedasticity%20Check.png)
 #### 
 ## Conclusion
 
