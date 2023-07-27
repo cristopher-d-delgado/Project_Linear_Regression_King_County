@@ -43,13 +43,34 @@ Overall the investigated features of a home were the following:
 * `lat` - Latitude coordinate
 * `long` - Longitude coordinate
 
-### Buisness Understanding
-The stakeholder in this project is a real estate agency that helps homeowners buy and/or sell homes. 
-### Buisness Problem
+## Buisness Understanding
+The stakeholder in this project is a real estate agency that helps homeowners buy and/or sell homes. A Real Estate Agency would like insghts for the home market being the King County. 
+
+## Buisness Problem
+**Stakeholder:** Real Estate Agency
+
 The stakeholder would like advice to provide homeowners information about how home renovations might increase the estimated value of their homes, and by what amount if they are wishing to sell a home. If a homeowner wants to buy a home the agency can provide advice to look for homes within their budget.  
 
 ## Data Exploration
-
+### Methodology:
+1. Perform data cleaning which consisted of changing data types to approprate/expected types.
+2. Normalize data and linearize continous data accordingly.
+3. Perform exploratory data analysis to understand the correlations of the features with the price of a home. 
+4. Take on an iterative approach to creating prediction models using Linear Regression. 
+### Part 1: Data Preparation
+* Cast columns to appropriate data types.
+* Identify and remove null records as well as duplicated records.
+* Normalize continous data to remove outliers and convert it back to original values. 
+* Linearize continous data using Log transformation. 
+* Extract zipcode and encode the zipcode so we only have unique records. Allows us to consider location as a feature. 
+### Part 2: Visualizations
+* Create interaction scatterplots using the categorical variables to see behavior in price vs a feature that is not categorical. 
+* View bar graphs for categorical variables with the heights corresponding to price.
+* View correlations with price for both continuous and categorical variables.
+* Create heatmap uisng long and lat and the interaction being price. 
+### Part 3: Preparing Categorical Data for Modeling
+* One hot encode all categorical variables.
+* Check for multlicollinearity within features and drop columns accordingly. 
 ## Model Sumamry
 
 ## Conclusion
