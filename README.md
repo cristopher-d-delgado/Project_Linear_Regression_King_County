@@ -74,9 +74,28 @@ Normalized Data and removed Outliers:
 * View correlations with price for both continuous and categorical variables.
 * Create heatmap uisng long and lat and the interaction being price. 
 
-Categoricals vs Price_log:
+#### Interaction Plots for continuous variables: 
+
+![interactions](images/interactions_cat.png)
+
+#### Interaction Plots for categorical variables:
+
+![interactions](images/zip_basement_interaction.png)
+![interactions](images/zip_bath_interaction.png)
+![interactions](images/zip_bed_interaction.png)
+![interactions](images/zip_cond_interaction.png)
+![interactions](images/zip_floor_interaction.png)
+![interactions](images/zip_garage_interaction.png)
+![interactions](images/zip_grade_interaction.png)
+![interactions](images/zip_greenbelt_interaction.png)
+![interactions](images/zip_nuis_interaction.png)
+![interactions](images/zip_patio_interaction.png)
+![interactions](images/zip_water_interaction.png)
+
+#### Categoricals vs Price_log:
 
 ![cat_bar](images/cat_bar.png)
+
 
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
