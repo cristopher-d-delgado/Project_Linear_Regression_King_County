@@ -61,7 +61,7 @@ The stakeholder would like advice to provide homeowners information about how ho
 * Cast columns to appropriate data types.
 * Identify and remove null records as well as duplicated records.
 * Normalize continous data to remove outliers and convert it back to original values. 
-* Linearize continous data using Log transformation. 
+* Linearize continous data using Log transformation. Log transformation allows for easier visualization and data compression due to homogenizing the variance in the continous data. This will allow for easier feature comparisons. 
 * Extract zipcode and encode the zipcode so we only have unique records. Allows us to consider location as a feature.
 
 Normalized Data and removed Outliers:
@@ -74,28 +74,36 @@ Normalized Data and removed Outliers:
 * View correlations with price for both continuous and categorical variables.
 * Create heatmap uisng long and lat and the interaction being price. 
 
-#### Interaction Plots for continuous variables: 
+#### Feature Influences: 
+
 **The main takeaways:**
 > Basement:
-> * Homes with a basement can increase a homes valuein comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a basement. 
+> * Homes with a basement can increase a homes value in comparison to those without a basement according to the bar graph. It is not a consistent indicator that a home with a basement would outcompete a home without a basement depicted through the interaction graphs. 
 
 > Garage:
-> * Homes with a garage can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a garage. 
+> * Homes with a garage can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a garage would outcompete a home without a garage depicted through the interaction graphs. 
 
 > Patio: 
-> * Homes with a patio can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a garage. 
+> * Homes with a patio can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a patio would outcompete a home without a patio depicted through the interaction graphs. 
 
-The overall assement here using categorical binary interactions, we can see the variance in price of a home has little to no effect if a home has a garage, basement, or patio. The variance in price of a home has a more important feature at hand.   
+> Floors:
+> * Floors can increase a homes up until 2.5 floors. After 2.5 floors there is a deacrease in a homes value. This can be seen through the bar graph as well as the interaction graph. 
+
+> Grade Number:
+> * The grade number does show a consistent indication that when the quality of the house is better the price increases as a reasult. This behavior can be seen in both the bar graph and interaction graph. 
+
+> Greenbelt, Waterfront, and Nuisance : 
+> * All three of these features demonstrate a very small amount of correlation to increase a homes value. The disparity in comparing homes with and without these features is high. According to the bar graphs when the feature is present the price of the home increases as a result. 
+
+> Bedrooms:
+> * Bedrooms does show consistent increase a homes price as bedrooms increase in a home. This behavior is depicted in the bar graph as well as the interaction graph.
+
+> Condition Number:
+> * Condition number does not show a consistent indication that a home can increase a homes price according to the interaction graph. There are homes with better conditions that are valued less than homes with worse conditions. Using the bar graph it is easier to determine that when the condition of a home increases the home value does as well. 
 
 ![interactions](images/interactions.png)
-
-#### Categoricals vs Price_log:
-
-Considering the categorical variables alone it is possible to see how it can impact price for a home individually. 
-
 ![bath](images/bath_vs_price.png)
 ![cat_bar](images/cat_bars.png)
-
 
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
@@ -115,11 +123,11 @@ The pairs of features that demonstrate multicollinearity are:
 ## Summary of Findings
 
 ## Model Sumamry
-| Model   | Description                                | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
-|:--------|:-------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
-| Model 1 | All features                               |       111       |0.697| 69.70%   |0.32018251682706217| Fail      | Fail             |
-| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.31608130723734723| Fail      | Fail             |
-| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.4471105062962519 | Fail      | Fail             |
+| Model   | Description                                                                           | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
+|:--------|:--------------------------------------------------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
+| Model 1 | All features with continous variables log transformed                                 |       111       |0.697| 69.70%   |0.32018251682706217| Fail      | Fail             |
+| Model 2 | All features with continous variables log transformed and categorical outliers removed|       111       |0.665| 66.50%   |0.31608130723734723| Fail      | Fail             |
+| Model 3 | Top 4 features correlated with price_log                                              |       4         |0.441| 44.10%   |0.4471105062962519 | Fail      | Fail             |
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
