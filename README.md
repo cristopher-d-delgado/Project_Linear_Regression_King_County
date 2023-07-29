@@ -69,18 +69,32 @@ Normalized Data and removed Outliers:
 ![Standard_vs_Cont_Data_Distributions](images/Normal%20Dist%20vs%20Standardized%20Data%20Dist.png)
 
 ### Part 2: Visualizations
-* Create interaction scatterplots using the categorical variables to see behavior in price vs a feature that is not categorical. 
+* Create interaction scatterplots using the categorical variables to see behavior in price vs continous features. 
 * View bar graphs for categorical variables with the heights corresponding to price.
 * View correlations with price for both continuous and categorical variables.
 * Create heatmap uisng long and lat and the interaction being price. 
 
 #### Interaction Plots for continuous variables: 
+**The main takeaways:**
+> Basement:
+> * Homes with a basement can increase a homes valuein comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a basement. 
 
-![interactions](images/interactions_cat.png)
+> Garage:
+> * Homes with a garage can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a garage. 
+
+> Patio: 
+> * Homes with a patio can increase a homes value in comparison to those without a basement. It is not a consistent indicator that a home with a basement would outcompete a home without a garage. 
+
+The overall assement here using categorical binary interactions, we can see the variance in price of a home has little to no effect if a home has a garage, basement, or patio. The variance in price of a home has a more important feature at hand.   
+
+![interactions](images/interactions.png)
 
 #### Categoricals vs Price_log:
 
-![cat_bar](images/cat_bar.png)
+Considering the categorical variables alone it is possible to see how it can impact price for a home individually. 
+
+![bath](images/bath_vs_price.png)
+![cat_bar](images/cat_bars.png)
 
 
 ### Part 3: Preparing Categorical Data for Modeling
@@ -103,13 +117,13 @@ The pairs of features that demonstrate multicollinearity are:
 ## Model Sumamry
 | Model   | Description                                | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
 |:--------|:-------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
-| Model 1 | All features                               |       111       |0.697| 69.70%   |0.10176505179945569| Fail      | Fail             |
-| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.09990739278487029| Fail      | Fail             |
-| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.09990739278487029| Fail      | Fail             |
+| Model 1 | All features                               |       111       |0.697| 69.70%   |0.32018251682706217| Fail      | Fail             |
+| Model 2 | All features w/categorical outliers removed|       111       |0.665| 66.50%   |0.31608130723734723| Fail      | Fail             |
+| Model 3 | Top 4 features correlated with price_log   |       4         |0.441| 44.10%   |0.4471105062962519 | Fail      | Fail             |
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
-Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
@@ -127,7 +141,7 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 **Model 3:** 
 
-Model 3 fails the normality check as the sample data differs significantly from the predicted data for high and low values. Removing features did shorten the tails for the normality check. Most of the features removed were zipcodes. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+Model 3 consider only the top 4 features. In doing so, this model only represents about 44% of the variance in price percent changes. The Mean Squared Error of .099 suggets that this model has about a .01 It fails the normality check as the sample data differs significantly from the predicted data for high and low values. Removing features did shorten the tails for the normality check. Most of the features removed were zipcodes. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
