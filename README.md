@@ -78,20 +78,6 @@ Normalized Data and removed Outliers:
 
 ![interactions](images/interactions_cat.png)
 
-#### Interaction Plots for categorical variables:
-
-![interactions](images/zip_basement_interaction.png)
-![interactions](images/zip_bath_interaction.png)
-![interactions](images/zip_bed_interaction.png)
-![interactions](images/zip_cond_interaction.png)
-![interactions](images/zip_floor_interaction.png)
-![interactions](images/zip_garage_interaction.png)
-![interactions](images/zip_grade_interaction.png)
-![interactions](images/zip_greenbelt_interaction.png)
-![interactions](images/zip_nuis_interaction.png)
-![interactions](images/zip_patio_interaction.png)
-![interactions](images/zip_water_interaction.png)
-
 #### Categoricals vs Price_log:
 
 ![cat_bar](images/cat_bar.png)
@@ -100,6 +86,18 @@ Normalized Data and removed Outliers:
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
 * Check for multlicollinearity within features and drop columns accordingly. 
+
+#### Multicollinearity Detection: 
+Multicollinearity occurs when features are correlated with eachother within the range of .75 through 1. Multicollinearity can affect model predictions in terms of inflating standard errors of regression coefficients. This as a result, creates less reliable predictions. If a model uses features that depend on eachother, then this violates the assumption of independent features which is assumed for linear regression because if featuires are not independent there is no way to determine which features truly driove the changes in the target variable. 
+
+The pairs of features that demonstrate multicollinearity are:
+|Feature Pair                     |CC      |
+|:--------------------------------|:-------|
+|sqft_living_log, sqft_above_log  |0.874526|
+|sqft_living_log, bathrooms       |0.762857|
+
+![multicollinearity](images/multicollinearity_check.png)
+
 ## Summary of Findings
 
 ## Model Sumamry
