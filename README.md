@@ -155,6 +155,18 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 ![Normality_Model3](images/Model%203%20Normality%20Check.png)
 ![Homoscedasticity_Model3](images/Model%203%20Homoscedasticity%20Check.png)
-#### 
+
+
+## Insights 
+#### Best Predictive Features: 
+
+TBD
+
+
+
 ## Conclusion
 
+Result Suggestions:
+* Location can make up for most of the variance in home values. Without the information on location the predictability is impacted. An example is a home with the presence of 'waterfront'. When waterfront is present the homes value does increase however due to such a small sample size the correlation between waterfront and price does not represent this fact. The same thing can be said about the feature 'greenbelt'. 
+* Square footage of livable space for a home does matter. The Square footage of the home (sqft_above) is moderetly correlated with price. Feature such as beds, baths, and floors increases home value and thus higher sell value. 
+* You need a home condition of 3 and above as well as a grade of 8 and above to have a high value home.
