@@ -8,11 +8,11 @@
 ## Overview
 This project was completed as part of the Flatiron School Curriculum for Data Science Phase 2 Scientific Computing and Quantitative Methods. 
 
-King County is located in the United States of America in Washington. The economy is dependent of commerce success which suggets high cash flow. A big contribution to this cash flow is real estate. Real Estate is known to have big success for people that dedicate themselves to buying homes and reselling them at a higher value. Real Estate also attempts to provide the best home for there customers and their needs if there customer is interested in buying a home. Real Estate agencies also provide service for those that are wishing to sell a home. This suggets that Real Estate agencies need predictive models to make informed decisions based on the market trends for their buyer/seller. 
+King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. A big contribution to this cash flow is real estate. Real Estate is known to have big success for people that dedicate themselves to buying homes and reselling them at a higher value. Real Estate also attempts to provide the best home for there customers and their needs if there customer is interested in buying a home. Real Estate agencies also provide service for those that are wishing to sell a home. This suggets that Real Estate agencies need predictive models to make informed decisions based on the market trends for their buyer/seller. 
 
 The objective of this project is to perform data visualization to display trends in home values with respect to home features. This project also includes a linear regresssion models to predict the percentage increase of a home value. 
 
-Overall the investigated features of a home were the following:
+Overall the investigated features of a home were the following in the King County dataset:
 * `id` - Unique identifier for a house
 * `date` - Date house was sold
 * `price` - Sale price (prediction target)
@@ -71,8 +71,7 @@ Normalized Data and removed Outliers:
 ### Part 2: Visualizations
 * Create interaction scatterplots using the categorical variables to see behavior in price vs continous features. 
 * View bar graphs for categorical variables with the heights corresponding to price.
-* View correlations with price for both continuous and categorical variables.
-* Create heatmap uisng long and lat and the interaction being price. 
+* View correlations with price for both continuous and categorical variables. 
 
 #### Feature Influences: 
 
@@ -102,8 +101,9 @@ Normalized Data and removed Outliers:
 > * Condition number does not show a consistent indication that a home can increase a homes price according to the interaction graph. There are homes with better conditions that are valued less than homes with worse conditions. Using the bar graph it is easier to determine that when the condition of a home increases the home value does as well. 
 
 ![interactions](images/interactions.png)
-![bath](images/bath_vs_price.png)
+
 ![cat_bar](images/cat_bars.png)
+![bath](images/bath_vs_price.png)
 
 ### Part 3: Preparing Categorical Data for Modeling
 * One hot encode all categorical variables.
@@ -123,11 +123,11 @@ The pairs of features that demonstrate multicollinearity are:
 ## Summary of Findings
 
 ## Model Sumamry
-| Model   | Description                                                                           | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
-|:--------|:--------------------------------------------------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
-| Model 1 | All features with continous variables log transformed                                 |       111       |0.697| 69.70%   |0.32018251682706217| Fail      | Fail             |
-| Model 2 | All features with continous variables log transformed and categorical outliers removed|       111       |0.665| 66.50%   |0.31608130723734723| Fail      | Fail             |
-| Model 3 | Top 4 features correlated with price_log                                              |       4         |0.441| 44.10%   |0.4471105062962519 | Fail      | Fail             |
+| Model   | Description                                                                              | Num of Features | r^2 | Accuracy | Mean Squared Err  | Normality | Homoscedasticity | 
+|:--------|:-----------------------------------------------------------------------------------------|:----------------|:----|:---------|:------------------|:----------|------------------|
+| Model 1 | All features with continous variables log transformed                                    |       111       |0.697| 69.70%   |0.32018251682706217| Fail      | Fail             |
+| Model 2 | All features with continous variables log transformed and categorical outliers removed   |       111       |0.665| 66.50%   |0.31608130723734723| Fail      | Fail             |
+| Model 3 | Top 4 features correlated with price_log (grade_num, sqft_above_log, bathrooms, bedrooms)|       4         |0.441| 44.10%   |0.4471105062962519 | Fail      | Fail             |
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
@@ -159,14 +159,16 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 ## Insights 
 #### Best Predictive Features: 
-
-TBD
-
-
+* Grade Number, Square Footage of the Home (sqft_above_log), Bathrooms, Bedrooms are the highest correlated with price. These features make up for 40% of the variance in the taregt variable price. Adding on when you consider the location of a home it increases to about 70% of the variance in price. All of the features that include aspects of a home such as sqft or bathrooms, bedrooms, garage, etc are positive coefficients in the models. However, when you factor in a homes location, it can negatively impact a homes value. Location is an imporatnt factor to consider for home. 
 
 ## Conclusion
 
 Result Suggestions:
-* Location can make up for most of the variance in home values. Without the information on location the predictability is impacted. An example is a home with the presence of 'waterfront'. When waterfront is present the homes value does increase however due to such a small sample size the correlation between waterfront and price does not represent this fact. The same thing can be said about the feature 'greenbelt'. 
-* Square footage of livable space for a home does matter. The Square footage of the home (sqft_above) is moderetly correlated with price. Feature such as beds, baths, and floors increases home value and thus higher sell value. 
-* You need a home condition of 3 and above as well as a grade of 8 and above to have a high value home.
+* Location can make up for most of the variance in home values. Without the information on location the predictability is impacted. An example is a home with the presence of 'waterfront'. When waterfront is present the homes value does increase however due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent this fact. The same thing can be said about the feature 'greenbelt'. 
+* Square footage of livable space for a home does matter. The Square footage of the home (sqft_above) is moderetly correlated with price. Features such as beds, baths, and floors increases home value and thus higher sell value. 
+* A home's condition of 3 and above as well as a grade of 8 and above increases a home's value. 
+
+Future Work: 
+* Obatin more records around King County so we can truly observe how location can impact price. 
+* Look into location research aspects such as proximity to schools, entertainment cecnters, etc. 
+* Use machine learning for predictive models
