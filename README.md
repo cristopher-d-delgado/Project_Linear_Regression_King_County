@@ -169,6 +169,6 @@ Result Suggestions:
 * A home's condition of 3 and above as well as a grade of 8 and above increases a home's value. 
 
 Future Work: 
-* Obatin more records around King County so we can truly observe how location can impact price. 
+* Obtain more records around King County so we can truly observe how location can impact price. 
 * Look into location research aspects such as proximity to schools, entertainment cecnters, etc. 
-* Use machine learning for predictive models
+* Use machine learning for predictive models.
