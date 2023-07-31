@@ -244,11 +244,11 @@ The generated predicted values are scattered in a random fashion as well as clus
 ## Conclusion
 
 Result Suggestions:
-* Location can make up for most of the variance in home values. Without the information on location the predictability is impacted. An example is a home with the presence of 'waterfront'. When waterfront is present the homes value does increase however due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent this fact. The same thing can be said about the feature 'greenbelt'. 
-* Square footage of livable space for a home does matter. The Square footage of the home (sqft_above) is moderetly correlated with price. Features such as beds, baths, and floors increases home value and thus higher sell value. 
-* A home's condition of 3 and above as well as a grade of 8 and above increases a home's value. 
+* **Location can make up for most of the price in a home's value.** Without the information on location the predictability is impacted significantly. An example is a home with the presence of 'waterfront'. When waterfront is present the homes value does increase. The same thing can be said about the feature 'greenbelt'. Zipcode does matter as there are homes around a waterfront or greenbelt or simply in different locations that can impact a home's value negatively or positively. 
+* **Home aspects such as bedrooms, bnathrooms, and square footage matter.** The Square footage of the home (sqft_above) is moderetly correlated with price. Features such as beds, baths, and floors increases home's value and thus higher sell value. When adding more features it can increase the home's value however do not overdo it as there are points where increasing features like start to make no difference.  
+* **A home's construction and state matter.** A condition of 3 and above as well as a grade of 8 and above increases a home's value. The qaulity and condition of a home can impact resale value. This means that renovation can impact a home's value. 
 
 Future Work: 
-* Obtain more records around King County so we can truly observe how location can impact price. 
+* Obtain more records around King County so we can truly observe how location can impact price. Due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent the fact where those homes did sell for more. We would need more records to comapre homes away and next to a waterfront to trully see how zipcode and waterfront can truly make a difference. We only mananged to see a small glimpse of this trend with the current datset. With more records representing most of King County this can improve the models issues with Heterosdasticity and Normality.
 * Look into location research aspects such as proximity to schools, entertainment centers, etc. 
 * Use machine learning for predictive models.
