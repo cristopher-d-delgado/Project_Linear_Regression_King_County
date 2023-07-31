@@ -180,17 +180,35 @@ Model 2a fails the normality check as the sample data differs significantly from
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
 
-![Normality_Model2a](images/model2a_normality.png)\
+![Normality_Model2a](images/model2a_normality.png)
 ![Homoscedasticity_Model2a](images/model2a_homoscedasticity.png)
+
+**Model 2b:** 
+
+Model 2b fails the normality check as the sample data differs moderatly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
+
+![Normality_Model2b](images/model2b_normality.png)
+![Homoscedasticity_Model2b](images/model2b_homoscedasticity.png)
 
 **Model 3:** 
 
-Model 3 consider only the top 4 features. In doing so, this model only represents about 44% of the variance in price percent changes. The Mean Squared Error of .099 suggets that this model has about a .01 It fails the normality check as the sample data differs significantly from the predicted data for high and low values. Removing features did shorten the tails for the normality check. Most of the features removed were zipcodes. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+Model 3 considers only the top 4 features. In doing so, this model can be considered as a simple model. Removing features did shorten the tails for the normality check. This model still has significant outliers. The model describes about 40% of the variance found in price_log. The model predictions are off by a factor of 1.56 times the actual price. 
 
-The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher and low values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
-![Normality_Model3](images/Model%203%20Normality%20Check.png)
-![Homoscedasticity_Model3](images/Model%203%20Homoscedasticity%20Check.png)
+![Normality_Model3](images/model3_normality.png)
+![Homoscedasticity_Model3](images/model3_homoscedasticity.png)
+
+
+**Model 3a:**
+Model 3 considers only the top 4 features in addition to removing outlier 2 standard deviations away from the mean. Removing features and outliers did shorten the tails for the normality check. In fact one entire tail is missing in comparison to the original Model 3. This model still has significant outliers since one tail is still present. The model describes about 25% of the variance found in price_log. The model predictions are off by a factor of 1.52 times the actual price. 
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher and low values. This model has the been the only model to get close to not being Heteroscedastic. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model3a](images/model3a_normality.png)
+![Homoscedasticity_Model3a](images/model3a_homoscedasticity.png)
 
 
 ## Insights 
