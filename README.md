@@ -174,36 +174,14 @@ The generated predicted values are scattered in a random fashion as well as clus
 ![Normality_Model2](images/model2_normality.png)
 ![Homoscedasticity_Model2](images/model2_homoscedasticity.png)
 
+**Model 2a:** 
 
+Model 2a fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
 
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Model 2:** 
-
-Model 2 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
-
-The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
-
-![Normality_Model2](images/Model%202%20Normality%20Check.png)
-![Homoscedasticity_Model2](images/Model%202%20Homoscedasticity%20Check.png)
+![Normality_Model2a](images/model2a_normality.png)\
+![Homoscedasticity_Model2a](images/model2a_homoscedasticity.png)
 
 **Model 3:** 
 
