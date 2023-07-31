@@ -140,12 +140,48 @@ The pairs of features that demonstrate multicollinearity are:
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
-Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model can't accurately predict percent changes in price if there high or low values. There is a section where the model can predict accurante percent changes which is where it follows closely to the red line. 
+Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model can't accurately predict percent changes in price if there high or low values.
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
 ![Normality_Model1](images/Model%201%20Normality%20Check.png)
 ![Homoscedasticity_Model1](images/Model%201%20Homoscedasticity%20Check.png)
+
+**Model 1a:**
+
+Model 1a fails the normality check as the sample data differs significantly from the prdicted values. This model only has one tail that deviates significantly from the reference normal line as seen the Q-Q plot. This suggest that the model can not predicted smaller price_log value accurately. 
+
+The generated values are scattered in a random fashion as well as clustered in a certain range. This rnage is very small as both the ends of small and large predicted values norrow down towards the reference line in the residual plot. Overall this model is not great in predicting high or low price_log values. 
+
+![Normality_Model1a](images/model1a_normality.png)
+![Homoscedasticity_Model1a](images/model1a_homoscedasricity.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Model 2:** 
 
