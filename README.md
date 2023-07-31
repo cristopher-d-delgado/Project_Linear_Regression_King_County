@@ -140,7 +140,7 @@ The pairs of features that demonstrate multicollinearity are:
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
-Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model can't accurately predict percent changes in price if there high or low values.
+Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model still has significant outliers. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
@@ -149,14 +149,21 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 **Model 1a:**
 
-Model 1a fails the normality check as the sample data differs significantly from the prdicted values. This model only has one tail that deviates significantly from the reference normal line as seen the Q-Q plot. This suggest that the model can not predicted smaller price_log value accurately. 
+Model 1a fails the normality check as the sample data differs significantly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen the Q-Q plot. This suggest that the model still has significant outliers. 
 
 The generated values are scattered in a random fashion as well as clustered in a certain range. This rnage is very small as both the ends of small and large predicted values norrow down towards the reference line in the residual plot. Overall this model is not great in predicting high or low price_log values. 
 
 ![Normality_Model1a](images/model1a_normality.png)
 ![Homoscedasticity_Model1a](images/model1a_homoscedasricity.png)
 
+**Model 1b:** 
 
+Model 1b fails the normality check as the sample data differs moderatly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen the Q-Q plot. This suggest that the models still has significant outliers.  
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model1b](images/model1b_normality.png)
+![Homoscedasticity_Model1b](images/model1b_homoscedasticity.png)
 
 
 
