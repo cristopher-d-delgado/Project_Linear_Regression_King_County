@@ -239,7 +239,7 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 ## Insights 
 #### Best Predictive Features: 
-* Grade Number, Square Footage of the Home (sqft_above_log), Bathrooms, Bedrooms are the highest correlated with price. These features make up for 40% of the variance in the taregt variable price. Adding on when you consider the location of a home it increases to about 70% of the variance in price. All of the features that include aspects of a home such as sqft or bathrooms, bedrooms, garage, etc are positive coefficients in the models. However, when you factor in a homes location, it can negatively impact a homes value. Location is an imporatnt factor to consider for home. 
+* Grade Number, Square Footage of the Home (sqft_above_log), Bathrooms, Bedrooms are the highest correlated with price. These features make up for 40% of the variance in the taregt variable price. Adding on when you consider the location of a home it can potentially increase to about 70% of the variance in price. All of the features that include aspects of a home such as sqft or bathrooms, bedrooms, garage, etc are positive coefficients in the models. However, when you factor in a homes location, it can negatively impact a homes value. Location is an imporatnt factor to consider for home. 
 
 ## Conclusion
 
@@ -250,5 +250,5 @@ Result Suggestions:
 
 Future Work: 
 * Obtain more records around King County so we can truly observe how location can impact price. 
-* Look into location research aspects such as proximity to schools, entertainment cecnters, etc. 
+* Look into location research aspects such as proximity to schools, entertainment centers, etc. 
 * Use machine learning for predictive models.
