@@ -210,6 +210,32 @@ The generated predicted values are scattered in a random fashion as well as clus
 ![Normality_Model3a](images/model3a_normality.png)
 ![Homoscedasticity_Model3a](images/model3a_homoscedasticity.png)
 
+**Model 4:**
+
+Model 4 considers a polynomial (x^2) approach to the continous features in the data. That being said the interpretability of this model is much simpler than any of the previous models since none of the continous features have been log transformed. This model still has significant outliers since its Q-Q plot contains two tails. The model explains about 64% of the variance found in price. The model predictions are off by 537578.26 dollars off the actual price.
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts low values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model4](images/model4_normality.png)
+![Homoscedasticity_Model4](images/model4_homoscedasticity.png)
+
+**Model 4a:**
+
+Model 4a considers a polynomial (x^2) approach to the continous features in the data. This model removes outliers beyond 2 standard deviations away from the mean. That being said the interpretability of this model is much simpler than any of the previous models since none of the continous features have been log transformed. This model still has significant outliers since its Q-Q plot contains two tails. This model is closer to normality in comparison to its original model 4. The model explains about 67% of the variance found in price. The model predictions are off by 253072.02 dollars off the actual price.
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts high and low values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model4a](images/model4a_normality.png)
+![Homoscedasticity_Model4a](images/model4a_homoscedasticity.png)
+
+**Model 4b:**
+
+Model 4b considers a polynomial (x^2) approach to the continous features in the data. This model removes outliers beyond 1 standard deviation away from the mean. That being said the interpretability of this model is much simpler than any of the previous models since none of the continous features have been log transformed. This model still has significant outliers since its Q-Q plot contains two tails. This model is closer to normality in comparison to its original model 4. The model explains about 65% of the variance found in price. The model predictions are off by 192922.65 dollars off the actual price.
+
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts high and low values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+
+![Normality_Model4b](images/model4b_normality.png)
+![Homoscedasticity_Model4b](images/model4b_homoscedasticity.png)
 
 ## Insights 
 #### Best Predictive Features: 
