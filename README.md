@@ -122,7 +122,7 @@ The pairs of features that demonstrate multicollinearity are:
 
 ## Summary of Findings
 
-## Model Sumamry
+## Model Summary
 | Model   | Description                                                                              | Num of Features | r^2 | Accuracy | Root Mean Square Err (RMSE)  | RMSE Interpretation                                                                      | Normality | Homoscedasticity | 
 |:--------|:-----------------------------------------------------------------------------------------|:----------------|:----|:---------|:-----------------------------|:-----------------------------------------------------------------------------------------|:----------|------------------|
 | Model 1 | All features with continuous variables log transformed                                   |       351       |0.697| 69.70%   |0.32018251682706217           |Model Predictions are off by a factor of 1.38 times the actual price.                     |Fail       |Fail              |
@@ -140,7 +140,7 @@ The pairs of features that demonstrate multicollinearity are:
 ### Model Normality and Homoscedasticity
 **Model 1:**
 
-Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model still has significant outliers. 
+Model 1 fails the normality check as the sample data differs significantly from the predicted data for high and low price percent changes. This suggets that the model still has significant outliers. This model explains about 70% of the variance found in price_log. The model predictions are off by a factor of 1.38 times the actual price. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
@@ -149,16 +149,16 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 **Model 1a:**
 
-Model 1a fails the normality check as the sample data differs significantly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
+Model 1a fails the normality check as the sample data differs significantly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. The model explains about 61% of the variance found in price_log. The model predictions are off by a factor of 1.35 times the actual price. 
 
-The generated values are scattered in a random fashion as well as clustered in a certain range. This rnage is very small as both the ends of small and large predicted values norrow down towards the reference line in the residual plot. Overall this model is not great in predicting high or low price_log values. 
+The generated values are scattered in a random fashion as well as clustered in a certain range. This range is very small as both the ends of small and large predicted values narrow down towards the reference line in the residual plot. Overall this model is not great in predicting high or low price_log values. 
 
 ![Normality_Model1a](images/model1a_normality.png)
 ![Homoscedasticity_Model1a](images/model1a_homoscedasricity.png)
 
 **Model 1b:** 
 
-Model 1b fails the normality check as the sample data differs moderatly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the models still has significant outliers.  
+Model 1b fails the normality check as the sample data differs moderatly from the predicted values. This model only has one tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the models still has significant outliers. This model explains about 67% of the variance found in price_log. The model predictions are off by a factor of 1.23 times the actual price. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
@@ -167,16 +167,16 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 **Model 2:**
 
-Model 2 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This model has two tails that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
+Model 2 fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This model has two tails that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. The model explains about 69% of the variance found in price_log. The model predictions are off by a factor of 1.38 times the actual price.
 
-The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher and lower values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data. 
 
 ![Normality_Model2](images/model2_normality.png)
 ![Homoscedasticity_Model2](images/model2_homoscedasticity.png)
 
 **Model 2a:** 
 
-Model 2a fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
+Model 2a fails the normality check as the sample data differs significantly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. The model explains about 68% of the variance found in price_log. The model predictions are off by a factor of 1.35 times the actual price. 
 
 The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
 
@@ -185,9 +185,9 @@ The generated predicted values are scattered in a random fashion as well as clus
 
 **Model 2b:** 
 
-Model 2b fails the normality check as the sample data differs moderatly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. 
+Model 2b fails the normality check as the sample data differs moderatly from the predicted data for high and low price_log values. This model has 1 tail that deviates significantly from the reference normal line as seen on the Q-Q plot. This suggest that the model still has significant outliers. The model explains about 66% of the variance found in price_log. The model predictions are off by a factor of 1.24 times the actual price. 
 
-The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
+The generated predicted values are scattered in a random fashion as well as clustered in a certain range of predicted values up until the model predicts higher and lower values. Unfortunately this suggets that the model does not show random scatter of points forming an approximately constant width band around the reference line. Overall this model is not appropriate for the data.
 
 ![Normality_Model2b](images/model2b_normality.png)
 ![Homoscedasticity_Model2b](images/model2b_homoscedasticity.png)
