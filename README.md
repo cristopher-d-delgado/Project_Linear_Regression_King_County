@@ -8,9 +8,11 @@
 ## Overview
 This project was completed as part of the Flatiron School Curriculum for Data Science Phase 2 Scientific Computing and Quantitative Methods. 
 
-King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. A big contribution to this cash flow is real estate. Real Estate is known to have big success for people that dedicate themselves to buying homes and reselling them at a higher value. Real Estate also attempts to provide the best home for there customers and their needs if there customer is interested in buying a home. Real Estate agencies also provide service for those that are wishing to sell a home. This suggets that Real Estate agencies need predictive models to make informed decisions based on the market trends for their buyer/seller. 
+King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. About seventy percent of the U.S Gross Domestic Product (GDP) compromises of consumer spending (Amadeo, 2022). A big contribution to this cash flow is real estate as real estate contributes to consumer spending and composed about nine percent of the GDP (Amadeo, 2021). 
 
-The objective of this project is to perform data visualization to display trends in home values with respect to home features for the listings between 2021-2022. This project also includes linear regresssion models to predict the percentage increase of a home value. 
+This project considers its stakeholder as a Real Estate agency. This agency provides services for those that are wishing to sell a home or but a home. This suggets that the agency needs a predictive model to make informed decisions based on the market trends for their buyer/seller in their location being 'King County'.  
+
+The objective of this project is to perform data visualization to display trends in home values with respect to home features for the listings between 2021-2022. This project also includes linear regression models to predict the home value using features in the data set included in this repository. 
 
 Overall the investigated features of a home were the following in the King County dataset:
 * `id` - Unique identifier for a house
@@ -257,3 +259,7 @@ Future Work:
 * Obtain more records around King County so we can truly observe how location can impact price. Due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent the fact where those homes did sell for more. We would need more records to compare homes away and next to a waterfront to truly see how zipcode and waterfront can truly make a difference. We only mananged to see a small glimpse of this trend with the current datset. With more records representing most of King County this can improve the models issues with Heterosdasticity and Normality.
 * Look into location research aspects such as proximity to schools, entertainment centers, etc. 
 * Use machine learning for predictive models.
+
+References: 
+1. Amadeo, K. (2022, July 5). How does the U.S. Economy Work?. The Balance. https://www.thebalancemoney.com/how-does-the-us-economy-work-4802698  
+2. Amadeo, K. (2021, March 4). Real Estate’s Impact on the US Economy. The Balance. https://www.thebalancemoney.com/how-does-real-estate-affect-the-u-s-economy-3306018  
