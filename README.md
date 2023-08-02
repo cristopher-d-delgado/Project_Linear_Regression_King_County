@@ -8,7 +8,7 @@
 ## Overview
 This project was completed as part of the Flatiron School Curriculum for Data Science Phase 2 Scientific Computing and Quantitative Methods. 
 
-King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. About seventy percent of the U.S Gross Domestic Product (GDP) compromises of consumer spending (Amadeo, 2022). A big contribution to this cash flow is real estate as real estate contributes to consumer spending and composed about nine percent of the GDP (Amadeo, 2021). 
+King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. About seventy percent of the U.S Gross Domestic Product (GDP) compromises of consumer spending (Amadeo, 2022). A big contribution to this cash flow is real estate. Real estate housing services contributes to consumer spending and composed about 10% of the GDP (Amadeo, 2021). This industry is important in maintaing the cash flow within the United States as well as generating jobs. As real estate contributed to $2.3 trillion to U.S. GDP and supported 15.1 million jobs. When accounting for all the activities with real estate it has contributed to about 20% of the GDP (NAHB, 2020). 
 
 This project considers its stakeholder as a Real Estate agency. This agency provides services for those that are wishing to sell a home or but a home. This suggets that the agency needs a predictive model to make informed decisions based on the market trends for their buyer/seller in their location being 'King County'.  
 
@@ -262,4 +262,5 @@ Future Work:
 
 References: 
 1. Amadeo, K. (2022, July 5). How does the U.S. Economy Work?. The Balance. https://www.thebalancemoney.com/how-does-the-us-economy-work-4802698  
-2. Amadeo, K. (2021, March 4). Real Estate’s Impact on the US Economy. The Balance. https://www.thebalancemoney.com/how-does-real-estate-affect-the-u-s-economy-3306018  
+2. Amadeo, K. (2021, March 4). Real Estate’s Impact on the US Economy. The Balance. https://www.thebalancemoney.com/how-does-real-estate-affect-the-u-s-economy-3306018 
+3. NAHB. (2020, December). Housing’s contribution to gross domestic product. Housing’s Contribution to Gross Domestic Product. https://www.nahb.org/news-and-economics/housing-economics/housings-economic-impact/housings-contribution-to-gross-domestic-product#:~:text=Housing’s%20combined%20contribution%20to%20GDP,homes%2C%20and%20brokers’%20fees.     
