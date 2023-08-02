@@ -2,7 +2,7 @@
 
 **Author:** Cristopher Delgado
 
-**Blog:** TBD
+**Blog:** [DEV](https://dev.to/cristopherddelgado/home-value-regression-analysis-2fl7)
 
 **Date:** July 2023
 ## Overview
