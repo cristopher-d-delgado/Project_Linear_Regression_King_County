@@ -264,3 +264,13 @@ References:
 1. Amadeo, K. (2022, July 5). How does the U.S. Economy Work?. The Balance. https://www.thebalancemoney.com/how-does-the-us-economy-work-4802698  
 2. Amadeo, K. (2021, March 4). Real Estate’s Impact on the US Economy. The Balance. https://www.thebalancemoney.com/how-does-real-estate-affect-the-u-s-economy-3306018 
 3. NAHB. (2020, December). Housing’s contribution to gross domestic product. Housing’s Contribution to Gross Domestic Product. https://www.nahb.org/news-and-economics/housing-economics/housings-economic-impact/housings-contribution-to-gross-domestic-product#:~:text=Housing’s%20combined%20contribution%20to%20GDP,homes%2C%20and%20brokers’%20fees.     
+
+Repository Structure:
+```
+├── data
+├── images
+├── notebooks
+├── .gitignore
+├── Home Regression Analysis.pdf
+├── README.md
+```
