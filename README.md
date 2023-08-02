@@ -10,7 +10,7 @@ This project was completed as part of the Flatiron School Curriculum for Data Sc
 
 King County is located in the United States of America in Washington. The U.S economy is dependent of on the success of commerce, which suggets high cash flow. A big contribution to this cash flow is real estate. Real Estate is known to have big success for people that dedicate themselves to buying homes and reselling them at a higher value. Real Estate also attempts to provide the best home for there customers and their needs if there customer is interested in buying a home. Real Estate agencies also provide service for those that are wishing to sell a home. This suggets that Real Estate agencies need predictive models to make informed decisions based on the market trends for their buyer/seller. 
 
-The objective of this project is to perform data visualization to display trends in home values with respect to home features. This project also includes a linear regresssion models to predict the percentage increase of a home value. 
+The objective of this project is to perform data visualization to display trends in home values with respect to home features for the listings between 2021-2022. This project also includes linear regresssion models to predict the percentage increase of a home value. 
 
 Overall the investigated features of a home were the following in the King County dataset:
 * `id` - Unique identifier for a house
@@ -254,6 +254,6 @@ Result Suggestions:
 ![model4b](images/model4b_coe.png)
 
 Future Work: 
-* Obtain more records around King County so we can truly observe how location can impact price. Due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent the fact where those homes did sell for more. We would need more records to comapre homes away and next to a waterfront to trully see how zipcode and waterfront can truly make a difference. We only mananged to see a small glimpse of this trend with the current datset. With more records representing most of King County this can improve the models issues with Heterosdasticity and Normality.
+* Obtain more records around King County so we can truly observe how location can impact price. Due to such a small sample size and overwheling majority of homes not being next to a waterfront, the correlation between waterfront and price does not represent the fact where those homes did sell for more. We would need more records to compare homes away and next to a waterfront to truly see how zipcode and waterfront can truly make a difference. We only mananged to see a small glimpse of this trend with the current datset. With more records representing most of King County this can improve the models issues with Heterosdasticity and Normality.
 * Look into location research aspects such as proximity to schools, entertainment centers, etc. 
 * Use machine learning for predictive models.
